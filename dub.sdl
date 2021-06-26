@@ -1,0 +1,5 @@
+name "minimize"
+description "A minimal D application."
+authors "sozel"
+copyright "Copyright © 2021, sozel"
+license "proprietary"

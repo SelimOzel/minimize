@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/minimize
+minimize.so
+minimize.dylib
+minimize.dll
+minimize.a
+minimize.lib
+minimize-test-*
+*.exe
+*.o
+*.obj
+*.lst
