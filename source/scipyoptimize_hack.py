@@ -1,10 +1,21 @@
 from numpy import sqrt, finfo
+import warnings
 
 def dummy_function():
 	print("script works.")
 
 _epsilon = sqrt(finfo(float).eps)
 
+class OptimizeWarning(UserWarning):
+    pass
+
+def _check_unknown_options(unknown_options):
+    if unknown_options:
+        msg = ", ".join(map(str, unknown_options.keys()))
+        # Stack level 4: this is called from _minimize_*, which is
+        # called from another function in SciPy. Level 4 is the first
+        # level in user code.
+        warnings.warn("Unknown solver options: %s" % msg, OptimizeWarning, 4)
 
 def _minimize_slsqp(func, x0, args=(), jac=None, bounds=None,
                     constraints=(),
