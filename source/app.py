@@ -32,7 +32,7 @@ def WhatIsThis(securityList_IN, securityPerc_IN, portfolioValue_IN, date_IN, mod
 			return constraint
 		cons.append({'type': 'ineq','fun' : funcGenerator(i)} )
 	
-	##res = minimize(func, securityQuantityArray, args = [portfolioValue_IN, securityPriceArray, securityPerc_IN[len(securityPerc_IN)-1]], constraints=cons, method = 'SLSQP', options={'disp': False})
+	#res = minimize(func, securityQuantityArray, args = [portfolioValue_IN, securityPriceArray, securityPerc_IN[len(securityPerc_IN)-1]], constraints=cons, method = 'SLSQP', options={'disp': False})
 	res = _minimize_slsqp(func, securityQuantityArray, args = [portfolioValue_IN, securityPriceArray, securityPerc_IN[len(securityPerc_IN)-1]], constraints=cons, method = 'SLSQP', options={'disp': False})
 
 	# Make it integer.
