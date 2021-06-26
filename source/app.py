@@ -3,6 +3,8 @@ import random
 import numpy as np
 from scipy.optimize import minimize
 
+from scipyoptimize_hack import dummy_function
+
 def WhatIsThis(securityList_IN, securityPerc_IN, portfolioValue_IN, date_IN, mode_IN):
 	optimizationDate = datetime.datetime(date_IN[0],date_IN[1],date_IN[2])
 	securityPriceArray = [0]*len(securityList_IN)

@@ -13,3 +13,4 @@ minimize-test-*
 *.o
 *.obj
 *.lst
+/source/__pycache__/
