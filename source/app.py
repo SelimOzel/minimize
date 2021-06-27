@@ -2,9 +2,10 @@ import datetime
 import random
 import numpy as np
 from scipy.optimize import minimize
+from scipy.optimize.slsqp import _minimize_slsqp
 
-from scipyoptimize_hack import dummy_function
-from scipyoptimize_hack import _minimize_slsqp
+#from scipyoptimize_hack import dummy_function
+#from scipyoptimize_hack import _minimize_slsqp
 
 def WhatIsThis(securityList_IN, securityPerc_IN, portfolioValue_IN, date_IN, mode_IN):
 	optimizationDate = datetime.datetime(date_IN[0],date_IN[1],date_IN[2])
